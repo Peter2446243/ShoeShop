@@ -159,5 +159,42 @@ namespace Shoe_Testing
             Assert.AreEqual(AStaff.EnrolmentDate, TestData);
         }
 
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 StaffID = 1;
+            //invoke the method
+            Found = AStaff.Find(StaffID);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestStaffIDFound()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //Boolean variable to store the result of the search
+            Boolean Found = true;
+            //create some test data to use with the method
+            Int32 StaffID = 21;
+            //invoke the method
+            Found = AStaff.Find(StaffID);
+            //check the address no
+            if (AStaff.StaffID != 21)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+
+
     }
 }

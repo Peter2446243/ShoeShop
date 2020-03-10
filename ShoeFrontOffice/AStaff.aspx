@@ -1,85 +1,48 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AStaff.aspx.cs" Inherits="AStaff" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StaffSystem.master" AutoEventWireup="true" CodeFile="AStaff.aspx.cs" Inherits="AStaff" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        <p>
-          <label>Staff ID</label>
-          <input type = "text"
-                 id = "txtStaffID"
-                 value = "" />
-        </p>
-        <p>
-          <label>Department</label>
-          <input type = "text"
-                 id = "txtDepartment"
-                 value = "" />
-        </p>
-            <p>
-            <label>Job Title</label>
-          <input type = "text"
-                 id = "txtJobTitle"
-                 value = "" />
-         </p>
-            <p>
-            <label>Name</label>
-          <input type = "text"
-                 id = "txtName"
-                 value = "" />
-         </p>
-            <p>
-            <label>Extension</label>
-          <input type = "text"
-                 id = "txtExtension"
-                 value = "" />
-         </p>
-            <p>
-            <label>Phone No</label>
-          <input type = "text"
-                 id = "txtPhoneNo"
-                 value = "" />
-         </p>
-            <p>
-            <label>Home Address</label>
-          <input type = "text"
-                 id = "txtHomeAddress"
-                 value = "" />
-         </p>
-            <p>
-            <label>PostCode</label>
-          <input type = "text"
-                 id = "txtPostCode"
-                 value = "" />
-         </p>
-            <p>
-            <label>City</label>
-          <input type = "text"
-                 id = "txtCity"
-                 value = "" />
-         </p>
-            <p>
-            <label>Enrolment Date</label>
-          <input type = "text"
-                 id = "txtEnrolmentDate"
-                 value = "" />
-         </p>
-            <p>
-            <label>Available</label>
-          <input type = "checkbox"
-                 id = "chkAvailable"
-                 value = "" />
-         </p>
-            <p>
-                <button type = "Submit" onclick="OK" value= "OK"> OK </button>
-               <button type = "reset" value = "Cancel"> Cancel </button>
-         </p>
-        </div>
-    </form>
-</body>
-</html>
+            <asp:Label ID="lblStaffID" runat="server" Text="Staff ID"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtStaffID" runat="server"></asp:TextBox>
+            <asp:Button ID="btnFind" runat="server" Text="Find" OnClick="btnFind_Click"/>
+            <br />
+            <asp:Label ID="lblDepartment" runat="server" Text="Department"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
+            <asp:TextBox ID="txtDepartment" runat="server"></asp:TextBox>
+            <br />
+            <asp:Label ID="lblJobTitle" runat="server" Text="Job Title"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <asp:TextBox ID="txtJobTitle" runat="server"></asp:TextBox>
+            <br />
+            <asp:Label ID="lblName" runat="server" Text="Name"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+            <br />
+            <asp:Label ID="lblExtension" runat="server" Text="Extension"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <asp:TextBox ID="txtExtension" runat="server"></asp:TextBox>
+            <br />
+            <asp:Label ID="lblPhoneNo" runat="server" Text="Phone No"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtPhoneNo" runat="server"></asp:TextBox>
+            <br />
+            <asp:Label ID="lblHomeAddress" runat="server" Text="Home Address"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtHomeAddress" runat="server" style="margin-right: 0px"></asp:TextBox>
+
+            <br />
+            <asp:Label ID="lblPostcode" runat="server" Text="Postcode"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            <asp:TextBox ID="txtPostcode" runat="server"></asp:TextBox>
+            <br />
+        <asp:Label ID="lblCity" runat="server" Text="City"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
+        <br />
+        <asp:Label ID="lblEnrolmentDate" runat="server" Text="Enrolment Date"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtEnrolmentDate" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:CheckBox ID="chkAvailable" runat="server" Text="Available"/>
+        <br />
+        <br />
+        <asp:Label ID="lblError" runat="server" ></asp:Label>
+        <br />
+        <br />
+        <asp:Button ID="btnOK" runat="server" Text="OK" OnClick="btnOK_Click" />
+        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click"/>
+        <br />
+
+    </asp:Content>

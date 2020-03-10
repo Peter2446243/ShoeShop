@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StaffSystem.master.cs" Inherits="StaffSystem" %>
+
+<!DOCTYPE html>
+
+<html>
+    <head id="Head1" runat="server">
+        <title>Sample Master Page</title>
+        <link href="StaffSystem.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <form id="form1" runat="server">
+ 
+             <header>
+                 Staff System</header>
+ 
+            <article>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </article>
+  
+    
+        </form>
+    </body>
+</html>
