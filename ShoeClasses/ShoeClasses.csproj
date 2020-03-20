@@ -50,8 +50,11 @@
     <Compile Include="txtDateAdded.cs" />
     <Compile Include="txtDelivery.cs" />
     <Compile Include="txtDescription.cs" />
+    <Compile Include="txtOrderlineNo.cs" />
     <Compile Include="txtOrderNo.cs" />
     <Compile Include="txtPaymentMethod.cs" />
+    <Compile Include="txtQuantity.cs" />
+    <Compile Include="txtShoeNo.cs" />
     <Compile Include="txtStaffNo.cs" />
     <Compile Include="txtTotalPrice.cs" />
   </ItemGroup>

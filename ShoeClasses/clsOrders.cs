@@ -197,5 +197,20 @@ namespace ShoeClasses
                 return false;
             }
         }
+
+        //function for the public validation method
+        public string Valid(string staffNo,
+                            string customerNo,
+                            string dataAdded,
+                            string description,
+                            string paymentMethod,
+                            string delivery,
+                            string totalPrice)
+        ///this function accepts 7 parameteres for validation
+        ///the function returns a string containing any error message
+        ///if no errors found then a blank string is returned
+        {
+            return "";
+        }
     }
 }

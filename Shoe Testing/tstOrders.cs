@@ -7,6 +7,16 @@ namespace Shoe_Testing
     [TestClass]
     public class tstOrders
     {
+        //good test data
+        //create some test data to pass to the method
+        string StaffNo = "1";
+        string CustomerNo = "1";
+        string DateAdded = DateTime.Now.Date.ToString();
+        string Description = "Test Description";
+        string PaymentMethod = "card";
+        string Delivery = "True";
+        string TotalPrice = "14.99";
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -322,6 +332,19 @@ namespace Shoe_Testing
             }
             //test to see that the result is correct
             Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsOrders AnOrder = new clsOrders();
+            //string variable to store any error message
+            String Error = "";
+            //invoke the method
+            Error = AnOrder.Valid(StaffNo, CustomerNo, DateAdded, Description, PaymentMethod, Delivery, TotalPrice);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
         }
     }
 }

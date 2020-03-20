@@ -7,6 +7,11 @@ namespace Shoe_Testing
     [TestClass]
     public class tstOrderline
     {
+        //good test data
+        //create some test data to pass to the method
+        string ShoeNo = "1";
+        string Quantity = "1";
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -66,6 +71,100 @@ namespace Shoe_Testing
             AnOrderline.Quantity = TestData;
             //test to see that the two values are the same
             Assert.AreEqual(AnOrderline.Quantity, TestData);
+        }
+
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsOrderline AnOrderline = new clsOrderline();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with this method
+            Int32 OrderlineNo = 1;
+            //invoke the method
+            Found = AnOrderline.Find(OrderlineNo);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestOrderlineNoFound()
+        {
+            //create an instance of the class we want to create
+            clsOrderline AnOrderline = new clsOrderline();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with this method
+            Int32 OrderlineNo = 1;
+            //invoke the method
+            Found = AnOrderline.Find(OrderlineNo);
+            //check the order no
+            if (AnOrderline.OrderlineNo != 1)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestShoeNoFound()
+        {
+            //create an instance of the class we want to create
+            clsOrderline AnOrderline = new clsOrderline();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with this method
+            Int32 OrderlineNo = 1;
+            //invoke the method
+            Found = AnOrderline.Find(OrderlineNo);
+            //check the order no
+            if (AnOrderline.ShoeNo != 1)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestQuantityFound()
+        {
+            //create an instance of the class we want to create
+            clsOrderline AnOrderline = new clsOrderline();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with this method
+            Int32 OrderlineNo = 1;
+            //invoke the method
+            Found = AnOrderline.Find(OrderlineNo);
+            //check the order no
+            if (AnOrderline.Quantity != 1)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsOrderline AnOrderline = new clsOrderline();
+            //string variable to store any error message
+            String Error = "";
+            //invoke the method
+            Error = AnOrderline.Valid(ShoeNo, Quantity);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
         }
     }
 }
