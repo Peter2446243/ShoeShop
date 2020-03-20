@@ -11,28 +11,30 @@
     <form id="form1" runat="server">
         <div>
 
-            <label for="OrderNo">Order No:</label>
-            <input type="text" id="OrderNo" name="OrderNo"/><br/><br/>
+            <label for="lblOrderNo">Order No:</label>
+            <input type="text" id="OrderNo" name="OrderNo"/>
 
-            <label for="StaffNo">Staff No:</label>
+            <asp:Button ID="Button1" runat="server" OnClick="btnFind_Click" Text="Find" /><br/><br/>
+
+            <label for="lblStaffNo">Staff No:</label>
             <input type="text" id="StaffNo" name="StaffNo"/><br/><br/>
 
-            <label for="CustomerNo">Customer No:</label>
+            <label for="lblCustomerNo">Customer No:</label>
             <input type="text" id="CustomerNo" name="CustomerNo"/><br/><br/>
 
-            <label for="Description">Description:</label>
+            <label for="lblDescription">Description:</label>
             <input type="text" id="Description" name="Description"/><br/><br/>
 
-            <label for="DateAdded">Date Added:</label>
+            <label for="lblDateAdded">Date Added:</label>
             <input type="text" id="DateAdded" name="DateAdded"/><br/><br/>
 
-            <label for="PaymentMethod">Payment Method:</label>
+            <label for="lblPaymentMethod">Payment Method:</label>
             <input type="text" id="PaymentMethod" name="PaymentMethod"/><br/><br/>
 
-            <label for="Delivery">Delivery:</label>
+            <label for="lblDelivery">Delivery:</label>
             <input type="text" id="Delivery" name="Delivery"/><br/><br/>
 
-            <label for="TotalPrice">Total Price:</label>
+            <label for="lblTotalPrice">Total Price:</label>
             <input type="text" id="TotalPrice" name="TotalPrice"/><br/><br/>
 
             <input type="checkbox" name="Active" value="Active"/> Active<br/><br/>

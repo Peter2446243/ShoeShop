@@ -158,11 +158,11 @@ namespace Shoe_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 1;
             //invoke the method
             Found = AnOrder.Find(OrderNo);
             //check the order no
-            if (AnOrder.OrderNo != 21)
+            if (AnOrder.OrderNo != 1)
             {
                 OK = false;
             }
@@ -180,11 +180,11 @@ namespace Shoe_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 1;
             //invoke the method
             Found = AnOrder.Find(OrderNo);
             //check the order no
-            if (AnOrder.StaffNo != 21)
+            if (AnOrder.StaffNo != 1)
             {
                 OK = false;
             }
@@ -202,11 +202,11 @@ namespace Shoe_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 1;
             //invoke the method
             Found = AnOrder.Find(OrderNo);
             //check the order no
-            if (AnOrder.CustomerNo != 21)
+            if (AnOrder.CustomerNo != 1)
             {
                 OK = false;
             }
@@ -224,7 +224,7 @@ namespace Shoe_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 1;
             //invoke the method
             Found = AnOrder.Find(OrderNo);
             //check the order no
@@ -246,7 +246,7 @@ namespace Shoe_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 1;
             //invoke the method
             Found = AnOrder.Find(OrderNo);
             //check the order no
@@ -268,7 +268,7 @@ namespace Shoe_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 1;
             //invoke the method
             Found = AnOrder.Find(OrderNo);
             //check the order no
@@ -290,7 +290,7 @@ namespace Shoe_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 1;
             //invoke the method
             Found = AnOrder.Find(OrderNo);
             //check the order no
@@ -312,7 +312,7 @@ namespace Shoe_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 1;
             //invoke the method
             Found = AnOrder.Find(OrderNo);
             //check the order no

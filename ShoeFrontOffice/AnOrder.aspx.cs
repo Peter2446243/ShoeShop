@@ -38,4 +38,31 @@ public partial class AnOrder : System.Web.UI.Page
         //redirect to the viewer page
         Response.Redirect("OrderViewer.aspx");
     }
+
+    protected void btnFind_Click(object sender, EventArgs e)
+    {
+        //create a new instance of clsOrders
+        clsOrders AnOrder = new clsOrders();
+        //variable to store the primary key
+        Int32 OrderNo;
+        //variable to store the result of the find operation
+        Boolean Found = false;
+        //get the primary key entered by the user
+        OrderNo = Convert.ToInt32(txtOrderNo.Text);
+        //find the record
+        Found = AnOrder.Find(OrderNo);
+        //if found
+        if (Found == true)
+        {
+            //display the values of the properties in the form
+            txtOrderNo.Text = AnOrder.OrderNo;
+            txtStaffNo.Text = AnOrder.StaffNo;
+            txtCustomerNo.Text = AnOrder.CustomerNo;
+            txtDescription.Text = AnOrder.Description;
+            txtDateAdded.Text = AnOrder.DateAdded;
+            txtPaymentMethod.Text = AnOrder.PaymentMethod;
+            txtDelivery.Text = AnOrder.Delivery;
+            txtTotalPrice.Text = AnOrder.TotalPrice;
+        }
+    }
 }
