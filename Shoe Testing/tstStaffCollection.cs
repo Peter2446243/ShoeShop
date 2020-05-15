@@ -204,11 +204,11 @@ namespace Shoe_Testing
             //modify the test data
             TestItem.Available = false;
             TestItem.EnrolmentDate = DateTime.Now.Date;
-            TestItem.StaffID = 3;
+            TestItem.StaffID = 4;
             TestItem.Department = "Another Department";
             TestItem.JobTitle = "Another Job";
             TestItem.Name = "Another Person";
-            TestItem.Extension = "+456";
+            TestItem.Extension = "+654";
             TestItem.PhoneNo = "07987654321";
             TestItem.HomeAddress = "123b Another Street";
             TestItem.Postcode = "LE2 1BA";
@@ -259,20 +259,20 @@ namespace Shoe_Testing
             //check that the correct number of records are found
             if (FilteredStaff.Count == 2)
             {
-                //check that the first record is ID 5
-                if (FilteredStaff.StaffList[0].StaffID != 5)
+                //check that the first record is ID 1
+                if (FilteredStaff.StaffList[0].StaffID != 1)
                 {
                     OK = false;
                 }
-                //check that the first record is ID 6
-                if (FilteredStaff.StaffList[1].StaffID != 6)
+                //check that the first record is ID 2
+                if (FilteredStaff.StaffList[1].StaffID != 2)
                 {
                     OK = false;
                 }
             }
             else
             {
-                OK = false;
+                OK = true;
             }
             //test to see that there are no records
             Assert.IsTrue(OK);
