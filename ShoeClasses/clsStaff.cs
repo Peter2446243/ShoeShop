@@ -256,7 +256,7 @@ namespace ShoeClasses
                 //record the error
                 Error = Error + "The date was not a valid date: ";
             }
-            
+
             //is the post code blank
             if (postcode.Length == 0)
             {
@@ -360,7 +360,7 @@ namespace ShoeClasses
                 //record the error
                 Error = Error + "The extension must be less than 9 characters : ";
             }
-            
+
             //return any error messages
             return Error;
         }
