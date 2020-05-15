@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -85,12 +85,23 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnApply_Click(object sender, EventArgs e)
     {
-
+        clsStaffCollection Staffs = new clsStaffCollection();
+        Staffs.ReportByPostcode(txtPostcode.Text);
+        lstStaff.DataSource = Staffs.StaffList;
+        lstStaff.DataValueField = "StaffID";
+        lstStaff.DataTextField = "Postcode";
+        lstStaff.DataBind();
     }
 
 
     protected void btnDisplayAll_Click(object sender, EventArgs e)
     {
-
+        clsStaffCollection Staffs = new clsStaffCollection();
+        Staffs.ReportByPostcode("");
+        txtPostcode.Text = "";
+        lstStaff.DataSource = Staffs.StaffList;
+        lstStaff.DataValueField = "StaffID";
+        lstStaff.DataTextField = "Postcode";
+        lstStaff.DataBind();
     }
 }
