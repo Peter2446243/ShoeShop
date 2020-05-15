@@ -437,7 +437,7 @@ namespace Shoe_Testing
             //string variable to store any error message
             String Error = "";
             //invoke the method
-            Error = AStaff.Valid(EnrolmentDate,Department,JobTitle,Name,Extension,PhoneNo,HomeAddress,Postcode,City);
+            Error = AStaff.Valid(EnrolmentDate, Department, JobTitle, Name, Extension, PhoneNo, HomeAddress, Postcode, City);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
