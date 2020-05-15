@@ -17,7 +17,7 @@ namespace ShoeClasses
             //object for data connection
             clsDataConnection DB = new clsDataConnection();
             //execute the stored procedure
-            DB.Execute("sproc_tblAddress_SelectAll");
+            DB.Execute("sproc_tblStaff_SelectAll");
             //populate the array list with the data table
             PopulateArray(DB);
         }
@@ -115,7 +115,7 @@ namespace ShoeClasses
             DB.AddParameter("@HomeAddress", mThisStaff.HomeAddress);
             DB.AddParameter("@Postcode", mThisStaff.Postcode);
             DB.AddParameter("@City", mThisStaff.City);
-            DB.AddParameter("@Enrolment", mThisStaff.EnrolmentDate);
+            DB.AddParameter("@EnrolmentDate", mThisStaff.EnrolmentDate);
             //execute the query returning the primary key value
             return DB.Execute("sproc_tblStaff_Insert");
         }
@@ -147,7 +147,7 @@ namespace ShoeClasses
             DB.AddParameter("@HomeAddress", mThisStaff.HomeAddress);
             DB.AddParameter("@Postcode", mThisStaff.Postcode);
             DB.AddParameter("@City", mThisStaff.City);
-            DB.AddParameter("@Enrolment", mThisStaff.EnrolmentDate);
+            DB.AddParameter("@EnrolmentDate", mThisStaff.EnrolmentDate);
             //execute the stored procedure
             DB.Execute("sproc_tblStaff_Update");
         }
