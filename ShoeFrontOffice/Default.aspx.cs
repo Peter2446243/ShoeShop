@@ -79,7 +79,7 @@ public partial class _Default : System.Web.UI.Page
         else //if no record has been selected
         {
             //display an error
-            lblError.Text = "Please select a record to delete from the list";
+            lblError.Text = "Please select a record to edit from the list";
         }
     }
 
