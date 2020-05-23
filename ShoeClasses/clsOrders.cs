@@ -149,22 +149,6 @@ namespace ShoeClasses
             }
         }
 
-        /*
-        public bool Find(int orderNo)
-        {
-            //set the private data members to the test data value
-            mOrderNo = 21;
-            mStaffNo = 21;
-            mCustomerNo = 21;
-            mDateAdded = Convert.ToDateTime("16/09/2015");
-            mDescription = "Test Description";
-            mPaymentMethod = "card";
-            mDelivery = true;
-            mTotalPrice = 14.99;
-            //always return true
-            return true;
-        }
-        */
 
         public bool Find(int OrderNo)
         {
@@ -199,18 +183,51 @@ namespace ShoeClasses
         }
 
         //function for the public validation method
-        public string Valid(string staffNo,
+        public string Valid(string orderNo,
+                            string staffNo,
                             string customerNo,
                             string dataAdded,
                             string description,
                             string paymentMethod,
                             string delivery,
                             string totalPrice)
-        ///this function accepts 7 parameteres for validation
+        ///this function accepts 8 parameteres for validation
         ///the function returns a string containing any error message
         ///if no errors found then a blank string is returned
         {
-            return "";
+            //create a string variable to store the error
+            String Error = "";
+            //create a temporary variable to store the date values
+            DateTime DateTemp;
+            //if the OrderNo is blank
+            if (orderNo.Length ==0)
+            {
+                //record the error
+                Error = Error + "The Order no may not be blank : ";
+            }
+            try
+            {
+                //copy the dateAdded value to the DateTemp variable
+                DateTemp = Convert.ToDateTime(DateAdded);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                //check to see if the date is greater than today's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the future : ";
+                }
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The date was not a valid date : ";
+            }
+            //return any error messages
+            return Error;
         }
     }
 }

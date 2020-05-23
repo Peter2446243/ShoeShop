@@ -69,7 +69,7 @@ namespace ShoeClasses
                 mQuantity = value;
             }
         }
-
+        
         public bool Find(int OrderlineNo)
         {
             //create an instance of the data connection
@@ -77,7 +77,7 @@ namespace ShoeClasses
             //add the parameter for the order no to search for
             DB.AddParameter("@OrderlineNo", OrderlineNo);
             //execute the stored procedure
-            DB.Execute("sproc_tblOrders_FilterByOrderlineNo");
+            DB.Execute("sproc_tblOrderline_FilterByOrderlineNo");
             //if one record is found (there should be either one or zero!)
             if (DB.Count == 1)
             {
@@ -96,7 +96,6 @@ namespace ShoeClasses
                 return false;
             }
         }
-
         //function for the public validation method
         public string Valid(string shoeNo,
                             string quantity)

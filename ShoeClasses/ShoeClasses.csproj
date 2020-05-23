@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,19 +45,8 @@
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsOrderline.cs" />
     <Compile Include="clsOrders.cs" />
-    <Compile Include="clsStaff.cs" />
+    <Compile Include="clsOrdersCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="txtCustomerNo.cs" />
-    <Compile Include="txtDateAdded.cs" />
-    <Compile Include="txtDelivery.cs" />
-    <Compile Include="txtDescription.cs" />
-    <Compile Include="txtOrderlineNo.cs" />
-    <Compile Include="txtOrderNo.cs" />
-    <Compile Include="txtPaymentMethod.cs" />
-    <Compile Include="txtQuantity.cs" />
-    <Compile Include="txtShoeNo.cs" />
-    <Compile Include="txtStaffNo.cs" />
-    <Compile Include="txtTotalPrice.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

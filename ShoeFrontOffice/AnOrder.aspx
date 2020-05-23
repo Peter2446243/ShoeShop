@@ -10,36 +10,35 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="lblOrderNo" runat="server" Text="Order No" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtOrderNo" runat="server" ></asp:TextBox>
 
-            <label for="lblOrderNo">Order No:</label>
-            <input type="text" id="OrderNo" name="OrderNo"/>
+            <asp:Button ID="btnFind" runat="server" OnClick="btnFind_Click" Text="Find" /><br/><br/>
 
-            <asp:Button ID="Button1" runat="server" OnClick="btnFind_Click" Text="Find" /><br/><br/>
+            <asp:Label ID="lblStaffNo" runat="server" Text="Staff No" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtStaffNo" runat="server" ></asp:TextBox><br/><br/>
 
-            <label for="lblStaffNo">Staff No:</label>
-            <input type="text" id="StaffNo" name="StaffNo"/><br/><br/>
+            <asp:Label ID="lblCustomerNo" runat="server" Text="Customer No" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtCustomerNo" runat="server" ></asp:TextBox><br/><br/>
 
-            <label for="lblCustomerNo">Customer No:</label>
-            <input type="text" id="CustomerNo" name="CustomerNo"/><br/><br/>
+            <asp:Label ID="lblescription" runat="server" Text="Description" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtDescription" runat="server" ></asp:TextBox><br/><br/>
 
-            <label for="lblDescription">Description:</label>
-            <input type="text" id="Description" name="Description"/><br/><br/>
+            <asp:Label ID="lblDateAdded" runat="server" Text="Date Added" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtDateAdded" runat="server" ></asp:TextBox><br/><br/>
 
-            <label for="lblDateAdded">Date Added:</label>
-            <input type="text" id="DateAdded" name="DateAdded"/><br/><br/>
+            <asp:Label ID="lblPaymentMethod" runat="server" Text="Payment Method" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtPaymentMethod" runat="server" ></asp:TextBox><br/><br/>
 
-            <label for="lblPaymentMethod">Payment Method:</label>
-            <input type="text" id="PaymentMethod" name="PaymentMethod"/><br/><br/>
+            <asp:Label ID="lblDelivery" runat="server" Text="Delivery" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtDelivery" runat="server" ></asp:TextBox><br/><br/>
 
-            <label for="lblDelivery">Delivery:</label>
-            <input type="text" id="Delivery" name="Delivery"/><br/><br/>
-
-            <label for="lblTotalPrice">Total Price:</label>
-            <input type="text" id="TotalPrice" name="TotalPrice"/><br/><br/>
+            <asp:Label ID="lblTotalPrice" runat="server" Text="Total Price" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtTotalPrice" runat="server" ></asp:TextBox><br/><br/>
 
             <input type="checkbox" name="Active" value="Active"/> Active<br/><br/>
 
-            <label>[lblError]</label><br/><br/>
+            <asp:Label ID="lblError" runat="server" ></asp:Label><br/><br/>
             <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" Text="OK" />
 
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" />

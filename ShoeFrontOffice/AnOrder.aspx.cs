@@ -8,6 +8,7 @@ using ShoeClasses;
 
 public partial class AnOrder : System.Web.UI.Page
 {
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -17,30 +18,61 @@ public partial class AnOrder : System.Web.UI.Page
     {
         //create a new instance of clsOrders
         clsOrders AnOrder = new clsOrders();
-        //capture the order no
-        AnOrder.OrderNo = txtOrderNo.Text;
         //capture the staff no
-        AnOrder.StaffNo = txtStaffNo.Text;
+        string StaffNo = txtStaffNo.Text;
         //capture the customer no
-        AnOrder.CustomerNo = txtCustomerNo.Text;
+        string CustomerNo = txtCustomerNo.Text;
         //capture the description
-        AnOrder.Description = txtDescription.Text;
+        string Description = txtDescription.Text;
         //capture the date added
-        AnOrder.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
+        string DateAdded = txtDateAdded.Text;
         //capture the payment method
-        AnOrder.PaymentMethod = txtPaymentMethod.Text;
+        string PaymentMethod = txtPaymentMethod.Text;
         //capture the delivery
-        AnOrder.Delivery = txtDelivery.Text;
+        string Delivery = txtDelivery.Text;
         //capture the total price
-        AnOrder.TotalPrice = txtTotalPrice.Text;
-        //store the order in the session object
-        Session["AnOrder"] = AnOrder;
-        //redirect to the viewer page
-        Response.Redirect("OrderViewer.aspx");
+        string TotalPrice = txtTotalPrice.Text;
+        //variable to store any error mesages
+        string Error = "";
+        //validate the date
+        Error = AnOrder.Valid(StaffNo, CustomerNo, DateAdded, Description, PaymentMethod, Delivery, TotalPrice);
+        if (Error == "")
+        {
+            //capture the staff no
+            AnOrder.StaffNo = StaffNo;
+            //capture the customer no
+            AnOrder.CustomerNo = CustomerNo;
+            //capture the description
+            AnOrder.Description = Description;
+            //capture the date added
+            AnOrder.DateAdded = Convert.ToDateTime(DateAdded);
+            //capture the payment method
+            AnOrder.PaymentMethod = PaymentMethod;
+            //capture the delivery
+            AnOrder.Delivery = Delivery;
+            //capture the total price
+            AnOrder.TotalPrice = TotalPrice;
+            //capture active
+            AnOrder.Active = chkActive.Checked;
+            //create a ne instance of the orders collection
+            clsOrdersCollection OrdersList = new clsOrdersCollection();
+            //set the ThisOrder property
+            OrdersList.ThisOrder = AnOrder;
+            //add the new record
+            OrdersList.Add();
+            //redirect back to the listpage
+            Response.Redirect("OrdersList.aspx");
+        }
+        else
+        {
+            //display the error message
+            lblError.Text = Error;
+        }
     }
 
     protected void btnFind_Click(object sender, EventArgs e)
     {
+        
         //create a new instance of clsOrders
         clsOrders AnOrder = new clsOrders();
         //variable to store the primary key
@@ -59,7 +91,7 @@ public partial class AnOrder : System.Web.UI.Page
             txtStaffNo.Text = AnOrder.StaffNo;
             txtCustomerNo.Text = AnOrder.CustomerNo;
             txtDescription.Text = AnOrder.Description;
-            txtDateAdded.Text = AnOrder.DateAdded;
+            txtDateAdded.Text = AnOrder.DateAdded.ToString();
             txtPaymentMethod.Text = AnOrder.PaymentMethod;
             txtDelivery.Text = AnOrder.Delivery;
             txtTotalPrice.Text = AnOrder.TotalPrice;

@@ -9,21 +9,21 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <label for="lblOrderlineNo">Orderline No:</label>
-            <input type="text" id="OrderlineNo" name="OrderlineNo"/>
+            <asp:Label ID="lblOrderlineNo" runat="server" Text="Orderline No" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtOrderlineNo" runat="server" ></asp:TextBox>
 
-            <!-- <asp:Button ID="Button1" runat="server" OnClick="btnFind_Click" Text="Find" /><br/><br/> -->
+            <asp:Button ID="btnFind" runat="server" OnClick="btnFind_Click" Text="Find" /><br/><br/>
 
-            <label for="lblShoeNo">Shoe No:</label>
-            <input type="text" id="ShoeNo" name="ShoeNo"/><br/><br/>
+            <asp:Label ID="lblShoeNo" runat="server" Text="Shoe No" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtShoeNo" runat="server" ></asp:TextBox><br/><br/>
 
-            <label for="lblQuantity">Quantity:</label>
-            <input type="text" id="Quantity" name="Quantity"/><br/><br/>
+            <asp:Label ID="lblQuantity" runat="server" Text="Quantity" Width="100px"></asp:Label>
+            &nbsp;<asp:TextBox ID="txtQuantity" runat="server" ></asp:TextBox><br/><br/>
 
             <input type="checkbox" name="Active" value="Active"/> Active<br/><br/>
 
             <label>[lblError]</label><br/><br/>
-            <!-- <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" Text="OK" /> -->
+            <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" Text="OK" /> 
 
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
         </div>
