@@ -28,7 +28,6 @@
             &nbsp;
             <asp:TextBox ID="txtPhoneNo" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="lblHomeAddress" runat="server" Text="Home Address" Width="100px"></asp:Label>
             &nbsp;
             <asp:TextBox ID="txtHomeAddress" runat="server" style="margin-right: 0px"></asp:TextBox>
             <br />
